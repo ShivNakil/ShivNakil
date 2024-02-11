@@ -91,7 +91,7 @@
                         </div>
                         <div class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark space-y-2">
                             <h3 class="text-4xl font-semibold">Shivdas Krishna Nakil</h3>
-                            <h4 class="md:text-lg text-yellow-300">A Fullstack Developer</h4>
+                            <h4 class="md:text-lg ">I'm <span class="auto text-yellow-300"></span></h4>
                             <div class="md:hidden flex items-center justify-end gap-2 p-1"><svg stroke="currentColor"
                                     fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                                     stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,7 @@
             <section id="info">
                 <p
                     class="before:text-[12rem] before:absolute before:-top-20 before:-left-12 before:text-primary/20 first-letter:font-bold first-letter:text-4xl text-justify">
-                    Welcome to my portfolio! I'm Shivda Nakil, a <strong>Fullstack Web Developer </strong>specializing
+                    Welcome to my portfolio! I'm Shivdas Nakil, a <strong>Fullstack Web Developer </strong>specializing
                     in creating dynamic and engaging web experiences. With a passion for crafting beautiful and
                     functional interfaces, I leverage a robust skill set in front-end and back-end technologies. From
                     HTML5, CSS3, and JavaScript for building responsive layouts to NodeJS, Express, and NestJS for
@@ -365,7 +365,17 @@
             </section>
         </main>
     </div>
-    <!-- <Script></Script> -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        let typed = new Typed(".auto", {
+            strings: ["Programmer.." , "Designer.." , "FullStack Developer.." , "Cyber Securiety Expert.."],
+            typeSpeed: 100,
+            backSpeed: 100,
+            looped: true
+        })
+    </script>
 
 </body>
 
