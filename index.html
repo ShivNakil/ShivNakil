@@ -6,6 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
     <title>Portfolio</title>
 </head>
 
@@ -29,33 +77,56 @@
     </nav>
     <div class="px-5">
         <main class="space-y-20 mb-10">
-            <section id="heropage" class="flex flex-col items-center md:items-end">
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full"><img alt="Profile Image"
-                        loading="lazy" width="200" height="200" decoding="async" data-nimg="1" class="rounded-full"
-                        style="color:transparent" src="./pp.jpg" />
-                    <div class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark space-y-2">
-                        <h3 class="text-4xl font-semibold">Shivdas Krishna Nakil</h3>
-                        <h4 class="md:text-lg text-yellow-200">A Fullstack Developer</h4>
-                        <div class="md:hidden flex items-center justify-end gap-2 p-1"><svg stroke="currentColor"
-                                fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                                stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <p class="text-2xl">Pune, India</p>
+            <a href="https://www.instagram.com/shiv_nakil?igsh=MXRyd2lyZHF5NGtyeA==" target="_blank">
+                <section id="heropage" class="flex flex-col items-center md:items-end">
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
+
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+
+                                <img alt="Profile Image" loading="lazy" width="200" height="200" decoding="async"
+                                    data-nimg="1" class="rounded-full flip-card-front" style="color:transparent" src="./gi.gif" />
+                                <img alt="Profile Image" loading="lazy" width="200" height="200" decoding="async"
+                                    data-nimg="1" class="rounded-full flip-card-back" style="color:transparent" src="./ppp.jpg" />
+
+
+                            </div>
+                            
+                        </div>
+
+
+
+
+
+
+                        <!-- <img alt="Profile Image" loading="lazy" width="200" height="200" decoding="async" data-nimg="1"
+                            class="rounded-full" style="color:transparent" src="./pp.jpg" /> -->
+
+                        <div class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark space-y-2">
+                            <h3 class="text-4xl font-semibold">Shivdas Krishna Nakil</h3>
+                            <h4 class="md:text-lg text-yellow-200">A Fullstack Developer</h4>
+                            <div class="md:hidden flex items-center justify-end gap-2 p-1"><svg stroke="currentColor"
+                                    fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <p class="text-2xl">Pune, India</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark hidden md:border flex items-center gap-2 p-1">
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <p class="text-xl">Pune, India</p>
-                </div>
-            </section>
+                    <div
+                        class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark hidden md:border flex items-center gap-2 p-1">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p class="text-xl">Pune, India</p>
+                    </div>
+                </section>
+            </a>
             <section id="info">
                 <p
                     class="before:text-[12rem] before:absolute before:-top-20 before:-left-12 before:text-primary/20 first-letter:font-bold first-letter:text-4xl text-justify">

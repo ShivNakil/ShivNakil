@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      cursor: {
+        'custom': "url('./pp.jpg'), pointer",
+      }
+    },
   },
   plugins: [],
 }
