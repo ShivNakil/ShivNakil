@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+    <title>Portfolio</title>
+</head>
+
+<body
+    class="__className_8c1529 md:mx-auto md:max-w-6xl bg-black bg-gradient-to-b from-slate-950 to-slate-700 bg-opacity-90 dark:bg-background-dark text-gray-900 dark:text-gray-100 pb-10">
+
+    <nav class="relative flex items-center justify-between mb-4 px-5 py-2"><a href="/">
+            <h2 class="text-3xl">Portfolio</h2>
+        </a>
+        <ul class="hidden md:flex gap-10 m-5 justify-end">
+            <li><a href="/#connect"><button
+                        class="bg-secondary-background dark:bg-secondary-background-dark text-gray-700 dark:text-white transition hover:brightness-90 active:brightness-95 active:scale-95 p-2 rounded underline">Connect</button></a>
+            </li>
+            <li><a href="/#skills"><button
+                        class="bg-secondary-background dark:bg-secondary-background-dark text-gray-700 dark:text-white transition hover:brightness-90 active:brightness-95 active:scale-95 p-2 rounded underline">Skills</button></a>
+            </li>
+            <li><a href="/#projects"><button
+                        class="bg-secondary-background dark:bg-secondary-background-dark text-gray-700 dark:text-white transition hover:brightness-90 active:brightness-95 active:scale-95 p-2 rounded underline">Projects</button></a>
+            </li>
+        </ul><button class="md:hidden"></button>
+    </nav>
+    <div class="px-5">
+        <main class="space-y-20 mb-10">
+            <a href="https://www.instagram.com/shiv_nakil?igsh=MXRyd2lyZHF5NGtyeA==" target="_blank">
+                <section id="heropage" class="flex flex-col items-center md:items-end">
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
+
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <img alt="Profile Image" loading="lazy" width="200" height="200" decoding="async"
+                                    data-nimg="1" class="rounded-full flip-card-front" style="color:transparent" src="./gi.gif" />
+                                <img alt="Profile Image" loading="lazy" width="200" height="200" decoding="async"
+                                    data-nimg="1" class="rounded-full flip-card-back" style="color:transparent" src="./ppp.jpg" />
+                            </div>                            
+                        </div>
+                        <div class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark space-y-2">
+                            <h3 class="text-4xl font-semibold">Shivdas Krishna Nakil</h3>
+                            <h4 class="md:text-lg ">I'm a <span class="auto text-yellow-300"></span></h4>
+                            <div class="md:hidden flex items-center justify-end gap-2 p-1"><svg stroke="currentColor"
+                                    fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <p class="text-2xl">Pune, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark hidden md:border flex items-center gap-2 p-1">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p class="text-xl">Pune, India</p>
+                    </div>
+                </section>
+            </a>
+            <section id="info">
+                <p
+                    class="before:text-[12rem] before:absolute before:-top-20 before:-left-12 before:text-primary/20 first-letter:font-bold first-letter:text-4xl text-justify">
+                    Welcome to my portfolio! I'm Shivdas Nakil, a <strong>Fullstack Web Developer </strong>specializing
+                    in creating dynamic and engaging web experiences. With a passion for crafting beautiful and
+                    functional interfaces, I leverage a robust skill set in front-end and back-end technologies. From
+                    HTML5, CSS3, and JavaScript for building responsive layouts to NodeJS, Express, and NestJS for
+                    scalable server-side applications, I ensure seamless functionality across the board. With a keen eye
+                    for design and a dedication to excellence, I deliver projects that exceed expectations. Explore my
+                    portfolio to see how I can bring your ideas to life with creativity and precision.</p>
+            </section>
+            <section id="connect" class="space-y-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                    <div class="w-10 h-px border border-dashed border-gray-400"></div>
+                    <h2 class="text-3xl">Connect</h2>
+                    <div class="w-full h-px border border-dashed border-gray-400"></div>
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                </div>
+                <div class="flex flex-col items-center md:flex-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div
+                        class="flex-1 w-56 p-3 rounded-lg transition-all hover:brightness-95 bg-gradient-to-r from-slate-300 to-slate-400 dark:from-secondary-background-dark dark:to-background-dark to-95% align-middle">
+                        <a href="https://github.com/shivnakil" class="flex items-center justify-center p-1"
+                            target="_blank" rel="noopener noreferrer">
+                            <p class="text-black font-bold">GitHub</p>
+                        </a>
+                    </div>
+                    <div
+                        class="flex-1 w-56 p-3 rounded-lg transition-all hover:brightness-95 bg-gradient-to-r from-slate-300 to-slate-400 dark:from-secondary-background-dark dark:to-background-dark to-95% ">
+                        <a href="https://www.linkedin.com/in/shivdasnakil/" class="flex items-center justify-center p-1"
+                            target="_blank" rel="noopener noreferrer">
+                            <p class="text-black font-bold">LinkedIn</p>
+                        </a>
+                    </div>
+                    <div
+                        class="flex-1 w-56 p-3 rounded-lg transition-all hover:brightness-95 bg-gradient-to-r from-slate-300 to-slate-400 dark:from-secondary-background-dark dark:to-background-dark to-95% ">
+                        <a href="tel:+91 8766908866" class="flex items-center justify-center p-1" target="_blank"
+                            rel="noopener noreferrer">
+                            <p class="text-black font-bold text-nowrap">Phone +91 8766908866</p>
+                        </a>
+                    </div>
+                    <div
+                        class="flex-1 w-56 p-3 rounded-lg transition-all hover:brightness-95 bg-gradient-to-r from-slate-300 to-slate-400 dark:from-secondary-background-dark dark:to-background-dark to-95% col-span-2 md:col-span-1">
+                        <a href="mailto:nakil.sk00@gmail.com" class="flex items-center justify-center p-1"
+                            target="_blank" rel="noopener noreferrer">
+                            <p class="text-black font-bold">nakil.sk00@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="space-y-6">
+                <div class="flex items-center gap-1">
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                    <div class="w-10 h-px border border-dashed border-gray-400"></div>
+                    <h2 class="text-3xl">Skills</h2>
+                    <div class="w-full h-px border border-dashed border-gray-400"></div>
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(234,179,8,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="JavaScript" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" /><span>JavaScript</span>
+                        </div>
+                    </a><a target="_blank" href="https://kotlinlang.org/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(168,85,247,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="Kotlin" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/kotlin-colored.svg" /><span>Kotlin</span>
+                        </div>
+                    </a><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(194,65,12,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="HTML5" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" /><span>HTML5</span>
+                        </div>
+                    </a><a target="_blank" href="https://www.w3.org/TR/CSS/#css">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(30,64,175,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="CSS3" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" /><span>CSS3</span>
+                        </div>
+                    </a><a target="_blank" href="https://reactjs.org/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(14,165,233,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="React" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" /><span>React</span>
+                        </div>
+                    </a><a target="_blank" href="https://sass-lang.com/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(244,114,182,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="Sass" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" /><span>Sass</span>
+                        </div>
+                    </a><a target="_blank" href="https://tailwindcss.com/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(20,184,166,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="TailwindCSS" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" /><span>TailwindCSS</span>
+                        </div>
+                    </a><a target="_blank" href="https://getbootstrap.com/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(126,34,206,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="Bootstrap" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" /><span>Bootstrap</span>
+                        </div>
+                    </a><a target="_blank" href="https://nodejs.org/en/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(74,222,128,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="NodeJS" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" /><span>NodeJS</span>
+                        </div>
+                    </a><a target="_blank" href="https://expressjs.com/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(31,41,55,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="Express" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored.svg" /><span>Express</span>
+                        </div>
+                    </a><a target="_blank" href="https://docs.nestjs.com/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(220,38,38,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="NestJS" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nestjs-colored.svg" /><span>NestJS</span>
+                        </div>
+                    </a><a target="_blank" href="https://www.postgresql.org/">
+                        <div class="border border-slate-600 flex items-center gap-2 p-4 rounded-lg bg-gradient-to-r to-secondary-background dark:to-secondary-background-dark transition-all hover:brightness-90 active:scale-90"
+                            style="--tw-gradient-from:rgba(30,64,175,0.2) var(--tw-gradient-from-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)">
+                            <img alt="PostgreSQL" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                                style="color:transparent"
+                                src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg" /><span>PostgreSQL</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section id="projects" class="space-y-4">
+                <div class="flex items-center gap-1">
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                    <div class="w-10 h-px border border-dashed border-gray-400"></div>
+                    <h2 class="text-3xl">Projects</h2>
+                    <div class="w-full h-px border border-dashed border-gray-400"></div>
+                    <div class="w-[18px] h-[15px] rounded-full bg-primary"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div tabindex="0"
+                        class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark transition-all hover:brightness-95 active:scale-95 cursor-pointer space-y-4">
+                        <!-- <div class="relative h-40"><img alt="KRTirtho/spotube" loading="lazy" decoding="async"
+                                data-nimg="fill" class="object-cover rounded-lg"
+                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                sizes="100vw"
+                                src="/_next/image?url=%2Fimages%2Fprojects%2Fspotube.jpg&amp;w=3840&amp;q=75" /></div> -->
+                        <div class="flex justify-between">
+                            <h3 class="flex items-center gap-2 capitalize text-2xl">Accident Life Saver<span><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <path
+                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                                        </path> -->
+                                    </svg></span></h3>
+                            <div class="flex items-center gap-1"><svg stroke="currentColor" fill="none" stroke-width="2"
+                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg><span>5.3K</span></div>
+                        </div>
+                        <p class="text-justify text-slate-300">This is an android app that reports accidents of
+                            vehicles. It uses the data of an accelerometer to
+                            detect the accident. Use of False Trigger increases the productivity of the project. This
+                            can be used in
+                            any vehicle, especially in ambulances. Detection of an accident will help police and your
+                            loved ones
+                            to reach out in a couple of minutes.</p>
+                    </div>
+                    <div tabindex="0"
+                        class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark transition-all hover:brightness-95 active:scale-95 cursor-pointer space-y-4">
+                        <!-- <div class="relative h-40"><img alt="KRTirtho/spotube" loading="lazy" decoding="async"
+                                data-nimg="fill" class="object-cover rounded-lg"
+                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                sizes="100vw"
+                                src="/_next/image?url=%2Fimages%2Fprojects%2Fspotube.jpg&amp;w=3840&amp;q=75" /></div> -->
+                        <div class="flex justify-between">
+                            <h3 class="flex items-center gap-2 capitalize text-2xl">Deepfake Detection<span><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <path
+                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                                        </path> -->
+                                    </svg></span></h3>
+                            <div class="flex items-center gap-1"><svg stroke="currentColor" fill="none" stroke-width="2"
+                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg><span>5.3K</span></div>
+                        </div>
+                        <p class="text-justify text-slate-300">Implemented a comprehensive deepfake detection system
+                            leveraging a combination of Error Level
+                            Analysis (ELA) and CNN. Conducted in-depth research on image manipulation techniques and
+                            utilized ELA to identify inconsistencies in error levels, serving as a preliminary filter
+                            for potential
+                            deepfakes. </p>
+                    </div>
+                    <div tabindex="0"
+                        class="rounded-lg p-5 bg-secondary-background dark:bg-secondary-background-dark transition-all hover:brightness-95 active:scale-95 cursor-pointer space-y-4">
+                        <!-- <div class="relative h-40"><img alt="KRTirtho/spotube" loading="lazy" decoding="async"
+                                data-nimg="fill" class="object-cover rounded-lg"
+                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                sizes="100vw"
+                                src="/_next/image?url=%2Fimages%2Fprojects%2Fspotube.jpg&amp;w=3840&amp;q=75" /></div> -->
+                        <div class="flex justify-between">
+                            <h3 class="flex items-center gap-2 capitalize text-2xl">VisualEureka<span><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <path
+                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                                        </path> -->
+                                    </svg></span></h3>
+                            <div class="flex items-center gap-1"><svg stroke="currentColor" fill="none" stroke-width="2"
+                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em"
+                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg><span>5.3K</span></div>
+                        </div>
+                        <p class="text-justify text-slate-300">Engineered a solution that allows users to explore image
+                            datasets
+                            through natural language queries, enhancing accessibility and user interaction. Implemented
+                            cutting-edge natural language processing (NLP) techniques combined with computer vision
+                            algorithms to enable seamless navigation and retrieval of relevant images based on textual
+                            input.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        let typed = new Typed(".auto", {
+            strings: ["Programmer.." , "Designer.." , "FullStack Developer.." , "Cyber Security Expert.."],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loopCount: Infinity,
+            loop: true
+        })
+    </script>
+
+</body>
+
+</html>
